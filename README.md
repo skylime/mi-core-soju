@@ -1,0 +1,7 @@
+# mi-core-soju
+
+This repository is based on [Joyent mibe](https://github.com/joyent/mibe).
+
+## description
+
+soju is a user-friendly IRC bouncer. soju connects to upstream IRC servers on behalf of the user to provide extra functionality. soju supports many features such as multiple users, numerous IRCv3 extensions, chat history playback and detached channels. It is well-suited for both small and large deployments.
