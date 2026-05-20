@@ -1,0 +1,18 @@
+name: deploy zone build
+on: 
+  pull_request:
+    types: [opened, synchronize, reopened]
+jobs:
+  deploy_zone_build:
+    runs-on: linux
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4
+      - name: Build SmartOS zone image
+        uses: https://${{ secrets.SKYLIME_GIT_URL }}/skylime/deploy-zone-action@main
+        with:
+          ssh_private_key: ${{ secrets.DZ_SSH_PRIVATE_KEY }}
+          dz_build_host: ${{ vars.DZ_BUILD_HOST }}
+          dz_build_publish_url_test: ${{ secrets.DZ_BUILD_PUBLISH_URL_TEST }}
+          dz_build_publish_url_release: ${{ secrets.DZ_BUILD_PUBLISH_URL_PROD }}
+          min_platform: ${{ vars.DZ_BUILD_MIN_PLATFORM }}
