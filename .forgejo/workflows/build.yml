@@ -2,6 +2,12 @@ name: deploy zone build
 on: 
   pull_request:
     types: [opened, synchronize, reopened]
+  workflow_dispatch:
+    inputs:
+      release:
+        description: 'Is this a release?'
+        type: boolean
+        default: false
 jobs:
   deploy_zone_build:
     runs-on: linux
@@ -16,3 +22,4 @@ jobs:
           dz_build_publish_url_test: ${{ secrets.DZ_BUILD_PUBLISH_URL_TEST }}
           dz_build_publish_url_release: ${{ secrets.DZ_BUILD_PUBLISH_URL_PROD }}
           min_platform: ${{ vars.DZ_BUILD_MIN_PLATFORM }}
+          release: ${{ input.release }}
