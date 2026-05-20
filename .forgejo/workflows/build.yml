@@ -22,4 +22,4 @@ jobs:
           dz_build_publish_url_test: ${{ secrets.DZ_BUILD_PUBLISH_URL_TEST }}
           dz_build_publish_url_release: ${{ secrets.DZ_BUILD_PUBLISH_URL_PROD }}
           min_platform: ${{ vars.DZ_BUILD_MIN_PLATFORM }}
-          release: ${{ input.release }}
+          release: ${{ inputs.release }}
