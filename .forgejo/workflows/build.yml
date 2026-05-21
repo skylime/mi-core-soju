@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
     inputs:
       release:
-        description: 'Is this a release?'
+        description: 'Create production release'
         type: boolean
         default: false
 jobs:
