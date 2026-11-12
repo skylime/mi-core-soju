@@ -1,5 +1,11 @@
 # Changelog
 
+## 25.4.3
+
+### Bug Fixes
+
+- Switch to original package with smf manifest [Thomas Merkel]
+
 ## 25.4.2
 
 ### Features
