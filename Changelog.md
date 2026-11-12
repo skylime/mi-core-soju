@@ -1,5 +1,28 @@
 # Changelog
 
+## 25.4.2
+
+### Features
+
+- Switch to core-base 25.4.1 with better backup support [Thomas Merkel]
+- Version bump to 0.11.1 of soju [Thomas Merkel]
+  * Add TLS client authentication support for downstream connectionjs.
+  * Introduce new soju.im/client-cert IRC extension to configure TLS client certificates.
+  * Add support for forwarding downstream client certificates across proxies via PP2_SUBTYPE_SSL_CLIENT_CERT.
+  * labeled-response is now supported for downstream clients, for reliable command/reply matching.
+  * An icon can be set in the configuration file.
+  * Add support for draft/extended-isupport, to advertise bouncer-wide metadata before logging in.
+  * Add support for CHATHISTORY AROUND, to query messages before and after a given timestamp.
+  * Add support for draft/ACCOUNTREQUIRED, to indicate that an account is required.
+- Switch to core-base 25.4.3 [Thomas Merkel]
+
+### Build
+
+- Add workflow template for forgejo [Thomas Merkel]
+- Allow manual workflow [Thomas Merkel]
+- Allow manual workflow (fix) [Thomas Merkel]
+- Modify button for production release [Thomas Merkel]
+
 ## 25.4.0
 
 ### Features
